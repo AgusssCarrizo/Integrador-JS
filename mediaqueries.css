@@ -1,0 +1,7 @@
+
+@media (max-width: 992px) {.navbarMenu{
+  display: flex;
+}
+.li-opc{
+  display: none;
+}}
