@@ -255,7 +255,7 @@ body .active .cart {
 
 .cont-cart-prod {
    width: 100%;
-   height: 25vhvh;
+   height: 25vh;
    border: 1px solid black;
    margin: auto;
    display: flex;
@@ -504,11 +504,11 @@ body .active .cart {
    border-top-left-radius: 2.5rem;
    border-bottom-left-radius: 0.9rem;
    border-bottom-right-radius: 0.9rem;
-   background: #b3b7b6;
+   background: #ffffff;
 }
 .cards-Beneficios p {
    text-align: center;
-   color: white;
+
    font-weight: bold;
 }
 .cards-Beneficios i {

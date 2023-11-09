@@ -16,6 +16,8 @@ const cartTotal = document.querySelector(".total");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+console.log("CARRITO ==> ", cart);
+
 const saveCart = () => {
    localStorage.setItem("cart", JSON.stringify(cart));
 };
@@ -139,8 +141,6 @@ const closeOnScroll = () => {
    menuBtn.classList.remove("activeColor");
 };
 
-//logica del carrito
-/*
 const renderCart = () => {
    if (!cart.length) {
       productsCart.innerHTML = `<p> No hay productos en el carrito. </p>`;
@@ -148,8 +148,8 @@ const renderCart = () => {
    }
    productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
 };
-const createCartProductTemplatee = (product) => {
-   const {id, nombre, precio, imagen, quantity} = product;
+const createCartProductTemplate = (e, i) => {
+   const {id, nombre, precio, imagen, quantity} = e;
    return `
     <div class="cont-cart-prod">
       <img class="img-cart" src="${imagen}" alt="${nombre}" />
@@ -165,8 +165,8 @@ const createCartProductTemplatee = (product) => {
     </div>
   `;
 };
-const createProductData = (e, i) => {
-   const {id, nombre, precio, imagen} = e;
+const createProductData = (product) => {
+   const {id, nombre, precio, imagen} = product;
    return {id, nombre, precio, imagen};
 };
 const addUnitToProduct = (product) => {
@@ -217,7 +217,7 @@ const isExistingCartProduct = (product) => {
 const createCartProduct = (product) => {
    cart = [...cart, {...product, quantity: 1}];
 };
- */
+
 const init = () => {
    renderProducts(productsData);
    categoriesContainer.addEventListener("click", apllyFilter);
@@ -228,11 +228,11 @@ const init = () => {
    cartBtn.addEventListener("click", toggleCart);
    cartBtnClose.addEventListener("click", closeCart);
    window.addEventListener("scroll", closeOnScroll);
-   /*window.addEventListener("DOMContentLoaded", renderCart);
+   window.addEventListener("DOMContentLoaded", renderCart);
    window.addEventListener("DOMContentLoaded", showCartBubble);
-   window.addEventListener("DOMContentLoaded", showCartTotal);*/
+   window.addEventListener("DOMContentLoaded", showCartTotal);
 
-   //productContainer.addEventListener("click", addProduct);
+   productContainer.addEventListener("click", addProduct);
 };
 
 init();
