@@ -207,7 +207,8 @@ header {
    display: flex;
    flex-direction: column;
    gap: 30px;
-   height: 80vh;
+   max-height: 70vh;
+
    overflow-y: scroll;
    z-index: 4;
    min-width: 375px;
@@ -224,7 +225,7 @@ header {
    flex-direction: row;
    justify-content: space-between;
    background: #c5cf96;
-   height: 40px;
+   height: 8%;
    align-items: center;
 }
 .total {
@@ -237,7 +238,6 @@ header {
 }
 .closeShopping {
    display: flex;
-
    justify-content: center;
    align-items: center;
    width: 50%;
@@ -252,6 +252,12 @@ body .active .cart {
    flex-direction: column;
    gap: 20px;
    border: 1px solid black;
+   height: 40%;
+   overflow: scroll;
+   margin-bottom: 60px;
+}
+.cart-container::-webkit-scrollbar {
+   display: none;
 }
 
 .cont-cart-prod {
