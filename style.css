@@ -27,7 +27,7 @@ header {
    display: none;
 }
 .logo {
-   width: 60px;
+   width: 100px;
    height: 40px;
    margin-left: 40px;
    border: solid 2px rgba(255, 255, 255, 0.385);
@@ -96,7 +96,7 @@ header {
    height: 90vh;
    width: 20vw;
    position: fixed;
-   z-index: 2;
+
    top: 60px;
    background: #d2d2d1;
 }
@@ -137,8 +137,9 @@ header {
    cursor: pointer;
    font-size: 25px;
    font-style: italic;
-   background: rgba(69, 68, 67, 0.88);
+   background: rgb(68, 58, 36);
    box-shadow: none;
+   color: white;
 }
 
 .subOpc {
@@ -208,7 +209,7 @@ header {
    gap: 30px;
    height: 80vh;
    overflow-y: scroll;
-   z-index: 2;
+   z-index: 4;
    min-width: 375px;
    transition: 0.5s;
 }
@@ -323,13 +324,12 @@ body .active .cart {
 /* //HOME */
 .home {
    display: flex;
-
    gap: 80px;
    max-width: 80vw;
    margin-top: 20px;
    position: absolute;
-   right: -10px;
-   top: 50px;
+   right: 0px;
+   top: 40px;
    display: flex;
    flex-direction: column;
    background: #d2d2d1;
@@ -392,9 +392,11 @@ body .active .cart {
    gap: 40px;
    max-width: 80vw;
    margin-top: 20px;
+   margin-bottom: 100px;
    position: absolute;
-   right: -10px;
+   right: -4px;
    top: 50px;
+   z-index: 1;
 }
 .product-1 {
    width: 20vw;
@@ -416,21 +418,7 @@ body .active .cart {
    transition: all 0.7s ease;
    overflow: hidden;
 }
-.product-1::before {
-   position: fixed;
-   content: "";
-   box-shadow: 0 0 100px 40px #ffffffef;
-   top: -40%;
-   left: -50%;
-   transform: rotate(-45deg);
-   height: 100rem;
-   transition: 1.5s all;
-}
-.product-1:hover::before {
-   filter: brightness(0.5);
-   top: -80%;
-   left: 500%;
-}
+
 .product-1:hover {
    border: 1px solid #ffffff44;
    box-shadow: 0 7px 50px 10px #000000;
@@ -452,7 +440,7 @@ body .active .cart {
    display: flex;
    flex-direction: column;
    height: 30%;
-   margin-top: 5%;
+   margin-top: 0%;
    justify-content: space-around;
 }
 .info p,
@@ -460,6 +448,10 @@ body .active .cart {
    font-family: "Lucida Sans", serif;
    font-size: 20px;
    margin-left: 15px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   max-width: 80%;
 }
 .boton {
    width: 100%;
@@ -478,8 +470,9 @@ body .active .cart {
    cursor: pointer;
 }
 .boton img {
-   width: 3vw;
-   height: 60%;
+   width: 50px;
+   height: auto;
+   margin-right: 10px;
 }
 
 .Beneficios {
@@ -528,6 +521,7 @@ body .active .cart {
    margin-left: auto;
    margin-right: auto;
    gap: 50px;
+   margin-bottom: 150px;
 }
 .form__field {
    display: flex;
@@ -554,4 +548,47 @@ body .active .cart {
 }
 small {
    color: red;
+}
+.footer {
+   width: 100vw;
+   height: 100px;
+   position: fixed;
+   bottom: 0;
+   background: rgb(68, 58, 36);
+   z-index: 2;
+}
+
+.info-footer {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
+.redes {
+   width: 40%;
+   height: 100px;
+
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   padding: 40px;
+
+   color: white;
+}
+.datos {
+   width: 60%;
+   height: 100px;
+
+   display: flex;
+   align-items: start;
+   justify-content: space-around;
+   flex-direction: column;
+   padding-left: 40px;
+}
+
+.datos a {
+   color: white;
+   text-decoration: none;
+}
+.datos i {
+   margin-right: 5px;
 }

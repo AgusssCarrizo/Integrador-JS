@@ -22,8 +22,8 @@ const saveCart = () => {
    localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-const createProductTemplate = (e, i) => {
-   const {id, nombre, precio, imagen} = e;
+const createProductTemplate = (product) => {
+   const {logo, id, nombre, precio, imagen} = product;
    return `
     <div class="product-1" >
       <img class="img-info" src="${imagen}" alt="${nombre}" />
@@ -35,10 +35,11 @@ const createProductTemplate = (e, i) => {
           class="btn-add"
            data-id='${id}'
             data-name='${nombre}'
-             data-img='${imagen}'>
+             data-img='${imagen}'
+             data-bid='${precio}'>
             Añadir al carrito
           </button>
-          <img src="${imagen}" alt="${nombre}" />
+          <img src="${logo}" alt="${nombre}" />
         </div>
       </div>
     </div>
@@ -147,6 +148,7 @@ const renderCart = () => {
       return;
    }
    productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
+   console.error(productsCart);
 };
 const createCartProductTemplate = (e, i) => {
    const {id, nombre, precio, imagen, quantity} = e;
@@ -192,8 +194,39 @@ const addProduct = (e) => {
 const updateCartState = () => {
    saveCart();
    renderCart();
-   ShowCartTotal();
+   showCartTotal();
    renderCartBubble();
+};
+const handleQuantity = (e) => {
+   if (e.target.classList.contains("down")) {
+      handleMinusBtnEvent(e.target.dataset.id);
+   } else if (e.target.classList.contains("up")) {
+      handlePlusBtnEvent(e.target.dataset.id);
+   }
+   updateCartState();
+};
+const handleMinusBtnEvent = (id) => {
+   const existingCartProduct = cart.find((item) => item.id === id);
+   console.log(existingCartProduct);
+   if (existingCartProduct.quantity === 1) {
+      removeProductFromCart(existingCartProduct);
+      return;
+   }
+   substractProductUnit(existingCartProduct);
+};
+const removeProductFromCart = (product) => {
+   cart = cart.filter((prod) => prod.id !== product.id);
+};
+const substractProductUnit = (product) => {
+   cart = cart.map((prod) => {
+      return prod.id === product.id
+         ? {...prod, quantity: Number(product.quantity) - 1}
+         : prod;
+   });
+};
+const handlePlusBtnEvent = (id) => {
+   const existingCartProduct = cart.find((item) => item.id === id);
+   addUnitToProduct(existingCartProduct);
 };
 
 const renderCartBubble = () => {
@@ -208,7 +241,7 @@ const showCartTotal = () => {
       0
    );
 
-   cartTotal.textContent = `$ ${total}`;
+   cartTotal.textContent = `${total.toFixed(2)} `;
 };
 const isExistingCartProduct = (product) => {
    return cart.some((item) => item.id === product.id);
@@ -219,7 +252,7 @@ const createCartProduct = (product) => {
 };
 
 const init = () => {
-   renderProducts(productsData);
+   renderProducts(appState.products[appState.currentProductsIndex]);
    categoriesContainer.addEventListener("click", apllyFilter);
    homes.addEventListener("click", homeFilter);
    categoriesContainer.addEventListener("click", homeFiltered);
@@ -231,7 +264,7 @@ const init = () => {
    window.addEventListener("DOMContentLoaded", renderCart);
    window.addEventListener("DOMContentLoaded", showCartBubble);
    window.addEventListener("DOMContentLoaded", showCartTotal);
-
+   productsCart.addEventListener("click", handleQuantity);
    productContainer.addEventListener("click", addProduct);
 };
 
