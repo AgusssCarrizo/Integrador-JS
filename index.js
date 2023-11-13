@@ -34,9 +34,9 @@ const createProductTemplate = (product) => {
           <button 
           class="btn-add"
            data-id='${id}'
-            data-name='${nombre}'
-             data-img='${imagen}'
-             data-bid='${precio}'>
+            data-nombre='${nombre}'
+             data-imagen='${imagen}'
+             data-precio='${precio}'>
             Añadir al carrito
           </button>
           <img src="${logo}" alt="${nombre}" />
@@ -148,7 +148,6 @@ const renderCart = () => {
       return;
    }
    productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
-   console.error(productsCart);
 };
 const createCartProductTemplate = (e, i) => {
    const {id, nombre, precio, imagen, quantity} = e;
@@ -157,10 +156,10 @@ const createCartProductTemplate = (e, i) => {
       <img class="img-cart" src="${imagen}" alt="${nombre}" />
       <div class="infoCart">
         <h2>${nombre}</h2>
-        <p>Precio: ${precio}</p>
+        <p>$${precio}</p>
          <div class="item-handler">
             <span class="quantity-handler down" data-id=${id}>-</span>
-            <span class="item-quantity">${quantity}</span>
+            <span class="item-quantity"> ${quantity}</span>
             <span class="quantity-handler up" data-id=${id}>+</span>
          </div>
       </div>
@@ -241,7 +240,7 @@ const showCartTotal = () => {
       0
    );
 
-   cartTotal.textContent = `${total.toFixed(2)} `;
+   cartTotal.textContent = `Total: $${total.toFixed(2)} `;
 };
 const isExistingCartProduct = (product) => {
    return cart.some((item) => item.id === product.id);
