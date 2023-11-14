@@ -19,7 +19,7 @@ header {
    justify-content: space-between;
    align-items: center;
    position: fixed;
-   z-index: 2;
+   z-index: 3;
 }
 
 .navbarMenu {
@@ -99,7 +99,6 @@ header {
    height: 90vh;
    width: 20vw;
    position: fixed;
-
    top: 60px;
    background: #d2d2d1;
 }
@@ -132,7 +131,6 @@ header {
 
 .HomeNav {
    height: 60px;
-
    width: 100%;
    display: flex;
    align-items: center;
@@ -189,10 +187,6 @@ header {
    display: flex;
    flex-direction: column;
 }
-
-/* #active {
-   background: rgb(22, 105, 153);
-} */
 
 /* Carrito */
 
@@ -255,7 +249,7 @@ header {
    background: #cd966c;
    border: 1px solid #a87650;
 }
-body .active .cart {
+body .active1 .cart {
    right: 0px;
 }
 
@@ -642,8 +636,13 @@ small {
    border: none;
 }
 
-.none {
+.desaparece {
    transform: scaleX(0);
+   transform-origin: bottom right;
+   transition: 0.5s;
+}
+.aparece {
+   transform: scaleX(100);
    transform-origin: bottom right;
    transition: 0.5s;
 }

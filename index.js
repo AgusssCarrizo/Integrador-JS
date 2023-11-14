@@ -9,7 +9,7 @@ const cartBtnClose = document.querySelector(".closeShopping");
 const cartBtnOpen = document.querySelector(".navbar");
 const extendedMenu = document.querySelector(".li-opc");
 const cartMenu = document.querySelector(".cart");
-const overlay = document.querySelector(".overlay");
+
 const productsCart = document.querySelector(".cart-container");
 const cartBubble = document.querySelector(".cart-bubble");
 const cartTotal = document.querySelector(".total");
@@ -66,7 +66,8 @@ const changeBtnActiveState = (filter) => {
    categories.forEach((btn) => {
       if (btn.dataset.category !== filter) {
          btn.classList.remove("active");
-         footer.classList.add("none");
+         footer.classList.add("desaparece");
+
          return;
       }
       btn.classList.add("active");
@@ -104,7 +105,7 @@ productContainer.style.display = "none";
 const homeFilter = () => {
    sliderContainer.style.display = "flex";
    productContainer.style.display = "none";
-   footer.classList.remove("none");
+   footer.classList.remove("desaparece");
 };
 
 const homeFiltered = (event) => {
@@ -121,28 +122,26 @@ const homeFiltered = (event) => {
 //Menú hamburguesa
 
 const toggleCart = () => {
-   cartBtnOpen.classList.add("active");
+   cartBtnOpen.classList.add("active1");
    cartBtn.classList.add("activeColor");
-   overlay.classList.add("show-overlay");
 };
 const closeCart = () => {
-   cartBtnOpen.classList.remove("active");
+   cartBtnOpen.classList.remove("active1");
    cartBtn.classList.remove("activeColor");
-   overlay.classList.remove("show-overlay");
 };
 const toggleMenu = () => {
    extendedMenu.classList.toggle("open-menu");
-   overlay.classList.toggle("show-overlay");
+
    menuBtn.classList.toggle("activeColor");
 };
 const closeOnnClick = (e) => {
    extendedMenu.classList.remove("open-menu");
-   overlay.classList.remove("show-overlay");
+
    menuBtn.classList.remove("activeColor");
 };
 const closeOnScroll = () => {
    cartBtnOpen.classList.remove("active");
-   overlay.classList.remove("show-overlay");
+
    extendedMenu.classList.remove("open-menu");
    menuBtn.classList.remove("activeColor");
 };

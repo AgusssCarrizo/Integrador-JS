@@ -1,11 +1,113 @@
 @media (max-width: 992px) {
+   .logo {
+      margin-left: auto;
+   }
+
    .navbarMenu {
       display: flex;
    }
+   .homes {
+      background: rgb(68, 58, 36);
+   }
+   .nav-prod {
+      height: 0vh;
+      width: 0vw;
+      background: none;
+      position: fixed;
+      z-index: 2;
+   }
+   .li-prod {
+      background: rgb(233, 230, 230);
+      box-shadow: none;
+   }
+   .liProdHamb {
+      background: rgb(233, 230, 230);
+   }
+   .home {
+      left: 30px;
+   }
+   .container-slider {
+      width: 50%;
+      left: 50px;
+   }
+   .slider__section {
+      width: 60%;
+   }
    .li-opc {
       display: none;
+      width: 100vw;
+      z-index: 2;
    }
    .open-menu {
       display: flex;
+   }
+   .Beneficios {
+      width: 100vw;
+      left: 0px;
+   }
+   .productos {
+      position: relative;
+      width: 100vw;
+      left: 80px;
+      right: inherit;
+   }
+   .contacto {
+      left: 100px;
+   }
+   .product-1 {
+      width: 30vw;
+   }
+   .footer {
+      width: 130vw;
+   }
+}
+@media (max-width: 576px) {
+   header {
+      width: 100vw;
+   }
+   .pag-1 {
+      width: 100vw;
+   }
+   .home {
+      left: 10px;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100vw;
+   }
+   .homeNav {
+      background: rgb(68, 58, 36);
+   }
+   .productos {
+      gap: 16px;
+   }
+   .product-1 {
+      width: 38vw;
+      left: -35px;
+
+      margin-left: 0px;
+      margin-right: 0px;
+      height: 40vh;
+   }
+   .img-info {
+      height: 50%;
+   }
+   .info {
+      height: 50%;
+   }
+   .boton {
+      height: 40%;
+   }
+   .footer {
+      width: 130vw;
+   }
+   .container-slider {
+      width: 60vw;
+      left: 50px;
+   }
+   .Beneficios {
+      width: 100vw;
+   }
+   .contacto {
+      left: -10px;
    }
 }
