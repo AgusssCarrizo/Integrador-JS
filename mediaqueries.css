@@ -65,6 +65,9 @@
    header {
       width: 100vw;
    }
+   main {
+      width: 100vw;
+   }
    .pag-1 {
       width: 100vw;
    }
@@ -78,15 +81,14 @@
       background: rgb(68, 58, 36);
    }
    .productos {
-      gap: 16px;
+      gap: 10px;
+      width: 100vw;
+      left: 40px;
+      right: 0;
    }
    .product-1 {
-      width: 38vw;
-      left: -35px;
-
-      margin-left: 0px;
-      margin-right: 0px;
-      height: 40vh;
+      width: 250px;
+      height: 50vh;
    }
    .img-info {
       height: 50%;
@@ -102,12 +104,30 @@
    }
    .container-slider {
       width: 60vw;
-      left: 50px;
+      left: 30px;
    }
    .Beneficios {
       width: 100vw;
+      margin-bottom: 80px;
+   }
+   .cards-Beneficios {
+      width: 100px;
    }
    .contacto {
       left: -10px;
+      width: 100vw;
+      flex-direction: column;
+   }
+   .mensaje {
+      width: 80vw;
+      position: relative;
+      left: -20px;
+   }
+   .form__field {
+      position: relative;
+      left: -20px;
+   }
+   .form__field input {
+      width: 300px;
    }
 }
