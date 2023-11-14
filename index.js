@@ -124,6 +124,9 @@ const homeFiltered = (event) => {
 const toggleCart = () => {
    cartBtnOpen.classList.add("active1");
    cartBtn.classList.add("activeColor");
+   if (extendedMenu.classList.toggle("open-menu")) {
+      extendedMenu.classList.remove("open-menu");
+   }
 };
 const closeCart = () => {
    cartBtnOpen.classList.remove("active1");
@@ -131,7 +134,9 @@ const closeCart = () => {
 };
 const toggleMenu = () => {
    extendedMenu.classList.toggle("open-menu");
-
+   if (cartBtnOpen.classList.contains("active1")) {
+      cartBtnOpen.classList.remove("active1");
+   }
    menuBtn.classList.toggle("activeColor");
 };
 const closeOnnClick = (e) => {

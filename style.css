@@ -250,7 +250,7 @@ header {
    border: 1px solid #a87650;
 }
 body .active1 .cart {
-   right: 0px;
+   right: 10px;
 }
 
 .cart-container {
@@ -258,7 +258,7 @@ body .active1 .cart {
    flex-direction: column;
 
    height: 40%;
-   width: 40vw;
+   width: 100%;
    overflow: scroll;
    margin-bottom: 60px;
 }
