@@ -262,7 +262,7 @@ body .active .cart {
 .cart-container {
    display: flex;
    flex-direction: column;
-   border: 1px solid black;
+
    height: 40%;
    width: 40vw;
    overflow: scroll;
@@ -309,6 +309,13 @@ body .active .cart {
    font-family: "Lucida Sans", serif;
    text-decoration: underline rgb(90, 59, 2);
    font-size: 25px;
+}
+.no-product {
+   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+   font-weight: bold;
+   text-align: center;
+   margin-top: 10px;
 }
 
 .item-handler {
@@ -445,6 +452,9 @@ body .active .cart {
    -webkit-backdrop-filter: blur(7px);
    transition: all 0.7s ease;
    overflow: hidden;
+   position: relative;
+   top: 25px;
+   bottom: 200px;
 }
 
 .product-1:hover {
@@ -624,4 +634,16 @@ small {
 
 .push-bottom {
    margin-bottom: 100px;
+}
+.disabled {
+   background-color: var(--text-gray);
+   color: white;
+   cursor: not-allowed;
+   border: none;
+}
+
+.none {
+   transform: scaleX(0);
+   transform-origin: bottom right;
+   transition: 0.5s;
 }

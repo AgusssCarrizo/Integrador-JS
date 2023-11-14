@@ -13,6 +13,8 @@ const overlay = document.querySelector(".overlay");
 const productsCart = document.querySelector(".cart-container");
 const cartBubble = document.querySelector(".cart-bubble");
 const cartTotal = document.querySelector(".total");
+const buyBtn = document.querySelector(".comprar");
+const footer = document.querySelector(".footer");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -64,6 +66,7 @@ const changeBtnActiveState = (filter) => {
    categories.forEach((btn) => {
       if (btn.dataset.category !== filter) {
          btn.classList.remove("active");
+         footer.classList.add("none");
          return;
       }
       btn.classList.add("active");
@@ -101,6 +104,7 @@ productContainer.style.display = "none";
 const homeFilter = () => {
    sliderContainer.style.display = "flex";
    productContainer.style.display = "none";
+   footer.classList.remove("none");
 };
 
 const homeFiltered = (event) => {
@@ -108,6 +112,7 @@ const homeFiltered = (event) => {
    if (isIniactiveFilterBtn(target)) {
       sliderContainer.style.display = "none";
       productContainer.style.display = "flex";
+
       changeFilterState(target);
       renderFilteredProducts();
    }
@@ -144,7 +149,7 @@ const closeOnScroll = () => {
 
 const renderCart = () => {
    if (!cart.length) {
-      productsCart.innerHTML = `<p> No hay productos en el carrito. </p>`;
+      productsCart.innerHTML = `<p class="no-product"> No hay productos en el carrito. </p>`;
       return;
    }
    productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
@@ -195,6 +200,7 @@ const updateCartState = () => {
    renderCart();
    showCartTotal();
    renderCartBubble();
+   disableBtn(buyBtn);
 };
 const handleQuantity = (e) => {
    if (e.target.classList.contains("down")) {
@@ -249,7 +255,23 @@ const isExistingCartProduct = (product) => {
 const createCartProduct = (product) => {
    cart = [...cart, {...product, quantity: 1}];
 };
-
+const disableBtn = (btn) => {
+   if (cart.length) {
+      btn.classList.remove("disabled");
+   } else {
+      btn.classList.add("disabled");
+   }
+};
+const resetCartItems = () => {
+   cart = [];
+   updateCartState();
+};
+const completeBuy = () => {
+   if (window.confirm("Desea completar su compra?")) {
+      resetCartItems();
+      alert("Gracias por su compra!");
+   }
+};
 const init = () => {
    renderProducts(appState.products[appState.currentProductsIndex]);
    categoriesContainer.addEventListener("click", apllyFilter);
@@ -265,6 +287,9 @@ const init = () => {
    window.addEventListener("DOMContentLoaded", showCartTotal);
    productsCart.addEventListener("click", handleQuantity);
    productContainer.addEventListener("click", addProduct);
+   buyBtn.addEventListener("click", completeBuy);
+
+   disableBtn(buyBtn);
 };
 
 init();
