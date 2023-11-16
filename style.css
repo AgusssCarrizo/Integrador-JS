@@ -330,7 +330,7 @@ body .active1 .cart {
 }
 
 .item-quantity {
-   color: var(--text-gray);
+   color: black;
 }
 
 .up {
@@ -632,8 +632,9 @@ small {
    margin-bottom: 100px;
 }
 .disabled {
-   background-color: var(--text-gray);
-   color: white;
+   background: #7c3b1a;
+   border: 1px solid #632d12;
+
    cursor: not-allowed;
    border: none;
 }
