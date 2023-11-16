@@ -487,14 +487,15 @@ body .active1 .cart {
    max-width: 80%;
 }
 .boton {
+   height: 40%;
    width: 100%;
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 .boton button {
-   width: 50%;
    height: 70%;
+   width: 60%;
    border-radius: 5rem;
    margin-left: 10px;
    border: none;
@@ -502,8 +503,9 @@ body .active1 .cart {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
    cursor: pointer;
 }
+
 .boton img {
-   width: 50px;
+   width: 40px;
    height: auto;
    margin-right: 10px;
 }

@@ -2,7 +2,11 @@
    .logo {
       margin-left: auto;
    }
+   #home-category {
+      color: white;
 
+      background: rgb(68, 58, 36);
+   }
    .navbarMenu {
       display: flex;
    }
@@ -68,6 +72,7 @@
       left: 80px;
       right: inherit;
    }
+
    .contacto {
       left: 100px;
    }
@@ -87,6 +92,11 @@
    }
    .pag-1 {
       width: 100vw;
+   }
+   #home-category {
+      color: white;
+
+      background: rgb(68, 58, 36);
    }
    .home {
       left: 10px;
@@ -121,9 +131,7 @@
    .info {
       height: 50%;
    }
-   .boton {
-      height: 40%;
-   }
+
    .footer {
       width: 130vw;
    }
