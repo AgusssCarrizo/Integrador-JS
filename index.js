@@ -66,7 +66,6 @@ const changeBtnActiveState = (filter) => {
    categories.forEach((btn) => {
       if (btn.dataset.category !== filter) {
          btn.classList.remove("active");
-         footer.classList.add("desaparece");
 
          return;
       }

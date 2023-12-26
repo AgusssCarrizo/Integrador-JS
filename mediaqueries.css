@@ -140,9 +140,14 @@
    .footer {
       width: 130vw;
    }
+   .hero {
+      margin-left: -150px;
+   }
+   .text-hero {
+      padding: none;
+   }
    .container-slider {
-      width: 60vw;
-      left: 30px;
+      width: 80vw;
    }
    .Beneficios {
       width: 100vw;

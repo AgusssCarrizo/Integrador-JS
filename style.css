@@ -383,10 +383,17 @@ body .active1 .cart {
    flex-direction: column;
    gap: 40px;
 }
+.text-hero h2 {
+   font-size: xx-large;
+   font-style: oblique;
+   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+}
 .text-hero p {
    text-align: justify;
    font-size: 1.2em;
    font-weight: lighter;
+   font-style: oblique;
 }
 .button {
    height: 30px;
@@ -398,6 +405,7 @@ body .active1 .cart {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
    cursor: pointer;
    background: var(--buttom-secondary);
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .text-hero {
    width: 50%;
@@ -460,11 +468,12 @@ body .active1 .cart {
    gap: 40px;
    max-width: 70vw;
    margin-top: 20px;
-   margin-bottom: 100px;
+   margin-bottom: 800px;
    position: absolute;
    right: 30px;
    top: 50px;
    z-index: 1;
+   height: 100vh;
 }
 
 .product-1 {
@@ -621,6 +630,7 @@ small {
    color: red;
 }
 .footer {
+   margin-top: 100px;
    width: 100vw;
    height: 100px;
    position: fixed;
