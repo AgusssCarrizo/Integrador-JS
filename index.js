@@ -34,7 +34,7 @@ const createProductTemplate = (product) => {
         <p> $${precio}</p>
         <div class="boton">
           <button 
-          class="btn-add"
+          class="btn-add button-cards"
            data-id='${id}'
             data-nombre='${nombre}'
              data-imagen='${imagen}'

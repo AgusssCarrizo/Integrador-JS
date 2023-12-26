@@ -4,11 +4,17 @@
    box-sizing: border-box;
 }
 
+:root {
+   --buttom-primary: #7c3b1a;
+   --buttom-secondary: #cd966c;
+}
+
 body {
    background: #d2d2d1;
 }
 body::-webkit-scrollbar {
    display: none;
+   padding-bottom: 20px;
 }
 /* Header */
 header {
@@ -361,10 +367,44 @@ body .active1 .cart {
    display: flex;
    flex-direction: column;
    background: #d2d2d1;
+   align-items: center;
+}
+/* Comienzo hero */
+.hero {
+   display: flex;
+   width: 80%;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.text-hero {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+.text-hero p {
+   text-align: justify;
+   font-size: 1.2em;
+   font-weight: lighter;
+}
+.button {
+   height: 30px;
+   width: 40%;
+   border-radius: 0.7rem;
+   margin-left: 10px;
+   border: 1px solid rgb(113, 71, 15);
+   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+   cursor: pointer;
+   background: var(--buttom-secondary);
+}
+.text-hero {
+   width: 50%;
 }
 .container-slider {
    margin-top: 20px;
-   width: 30%;
+   width: 40%;
    margin-left: auto;
    margin-right: auto;
    overflow: hidden;
@@ -418,17 +458,17 @@ body .active1 .cart {
    display: flex;
    flex-wrap: wrap;
    gap: 40px;
-   max-width: 80vw;
+   max-width: 70vw;
    margin-top: 20px;
    margin-bottom: 100px;
    position: absolute;
-   right: -4px;
+   right: 30px;
    top: 50px;
    z-index: 1;
 }
 
 .product-1 {
-   width: 20vw;
+   width: 270px;
    height: 60vh;
    box-shadow: -10px -5px 20px black, inset 5px 2px 5px gray;
    margin: auto;
@@ -441,7 +481,7 @@ body .active1 .cart {
       0%,
       rgba(153, 144, 162, 0.5) 100%
    );
-   border: 1px solid #ffffff4b;
+   border: 1px solid rgb(113, 71, 15);
    backdrop-filter: blur(7px);
    -webkit-backdrop-filter: blur(7px);
    transition: all 0.7s ease;
@@ -493,15 +533,16 @@ body .active1 .cart {
    justify-content: space-between;
    align-items: center;
 }
-.boton button {
-   height: 70%;
-   width: 60%;
+.button-cards {
+   height: 30px;
+   width: 50%;
    border-radius: 5rem;
    margin-left: 10px;
-   border: none;
+   border: 1px solid rgb(113, 71, 15);
    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
    cursor: pointer;
+   background: var(--buttom-secondary);
 }
 
 .boton img {
@@ -571,11 +612,6 @@ body .active1 .cart {
 .form__input::placeholder {
    color: rgb(90, 59, 2);
    font-style: oblique;
-}
-
-.form__submit__btn {
-   height: 30px;
-   width: 100px;
 }
 
 .error {

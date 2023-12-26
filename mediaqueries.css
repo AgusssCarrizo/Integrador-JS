@@ -10,9 +10,12 @@
    .navbarMenu {
       display: flex;
    }
-   .homes {
-      background: rgb(68, 58, 36);
+
+   .home {
+      position: absolute;
+      left: 80px;
    }
+
    .cart {
       right: -1000px;
       width: 370px;
@@ -44,9 +47,7 @@
    .liProdHamb {
       background: rgb(233, 230, 230);
    }
-   .home {
-      left: 30px;
-   }
+
    .container-slider {
       width: 50%;
       left: 50px;
@@ -62,23 +63,23 @@
    .open-menu {
       display: flex;
    }
+
    .Beneficios {
       width: 90vw;
-      left: 0px;
    }
    .productos {
       position: relative;
       width: 100vw;
-      left: 80px;
+      left: 140px;
       right: inherit;
    }
-
+   .product-1 {
+      width: 280px;
+   }
    .contacto {
       left: 100px;
    }
-   .product-1 {
-      width: 30vw;
-   }
+
    .footer {
       width: 100vw;
    }
@@ -90,28 +91,32 @@
    main {
       width: 100vw;
    }
-   .pag-1 {
-      width: 100vw;
-   }
+
    #home-category {
       color: white;
 
       background: rgb(68, 58, 36);
    }
    .home {
-      left: 10px;
-      margin-left: 0px;
-      margin-right: 0px;
+      left: 50px;
       width: 100vw;
    }
    .homeNav {
       background: rgb(68, 58, 36);
    }
+   .hero {
+      flex-direction: column;
+   }
+
+   .text-hero {
+      width: 100%;
+      padding-left: 40px;
+   }
    .productos {
       gap: 10px;
       width: 100vw;
       left: 40px;
-      right: 0;
+      right: 20px;
    }
    .cart {
       right: -1000px;
@@ -122,7 +127,7 @@
    }
 
    .product-1 {
-      width: 250px;
+      width: 280px;
       height: 50vh;
    }
    .img-info {
@@ -147,8 +152,6 @@
       width: 100px;
    }
    .contacto {
-      left: -10px;
-      width: 100vw;
       flex-direction: column;
    }
    .mensaje {
