@@ -208,7 +208,7 @@ header {
    max-height: 70vh;
    overflow-y: scroll;
    z-index: 30;
-   min-width: 375px;
+   width: 375px;
    transition: 0.5s;
 }
 .tittle-cart {
