@@ -466,21 +466,28 @@ body .active1 .cart {
    display: flex;
    flex-wrap: wrap;
    gap: 40px;
+
    max-width: 70vw;
    margin-top: 20px;
-   margin-bottom: 800px;
-   position: absolute;
-   right: 30px;
+   margin-bottom: 160px;
+   bottom: 1000px;
+   position: relative;
+   left: 500px;
    top: 50px;
    z-index: 1;
-   height: 100vh;
+   height: 80vh;
+   overflow: scroll;
+}
+
+.productos::-webkit-scrollbar {
+   display: none;
 }
 
 .product-1 {
    width: 270px;
    height: 60vh;
    box-shadow: -10px -5px 20px black, inset 5px 2px 5px gray;
-   margin: auto;
+
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -496,8 +503,7 @@ body .active1 .cart {
    transition: all 0.7s ease;
    overflow: hidden;
    position: relative;
-   top: 25px;
-   bottom: 200px;
+   top: 0px;
 }
 
 .product-1:hover {
