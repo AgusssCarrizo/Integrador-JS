@@ -1,4 +1,11 @@
-@media (max-width: 1300px) {
+@media (max-width: 2000px) {
+   .productos {
+      left: 400px;
+      width: 70vw;
+   }
+}
+
+@media (max-width: 1500px) {
    .productos {
       left: 250px;
       width: 70vw;
