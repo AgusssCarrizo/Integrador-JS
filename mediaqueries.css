@@ -1,6 +1,7 @@
-@media (max-width: 1070px) {
+@media (max-width: 1300px) {
    .productos {
       left: 250px;
+      width: 70vw;
    }
 }
 @media (max-width: 992px) {
@@ -43,7 +44,7 @@
       width: 0vw;
       background: none;
       position: fixed;
-      z-index: 2;
+      z-index: 20;
    }
    .li-prod {
       background: rgb(233, 230, 230);
@@ -73,10 +74,8 @@
       width: 90vw;
    }
    .productos {
-      position: relative;
       width: 100vw;
-      left: 140px;
-      right: inherit;
+      left: 0px;
    }
    .product-1 {
       width: 280px;
@@ -120,8 +119,7 @@
    .productos {
       gap: 10px;
       width: 100vw;
-      left: 40px;
-      right: 20px;
+      left: 0px;
    }
    .cart {
       right: -1000px;
