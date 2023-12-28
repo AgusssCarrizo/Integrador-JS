@@ -207,7 +207,7 @@ header {
    gap: 30px;
    max-height: 70vh;
    overflow-y: scroll;
-   z-index: 2;
+   z-index: 30;
    min-width: 375px;
    transition: 0.5s;
 }
